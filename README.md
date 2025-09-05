@@ -25,7 +25,7 @@ docker build -t wrf-stilt-model .
 
  docker run -d --name wrf-stilt-model -p 8000:8000 -p 5555:5555 \
   -v $(pwd)/data:/src/data \
-  gfs-stilt-model 
+  wrf-stilt-model 
 
 ```
 
@@ -39,6 +39,6 @@ https://www.ready.noaa.gov/HYSPLIT_register.php(https://www.ready.noaa.gov/HYSPL
 
 After registering, download the executables, unzip them, and copy to:
 ```
-build/bin/linux-gnu/
+build/bin/linux_x64/* exe/
 ```
 Or place them directly into the Docker image under ${STILT_WD}/exe/.
